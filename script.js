@@ -2,19 +2,30 @@
 // Create a function that lays down 16 divs next to eachother
 // then moves onto next line down,
 // repeats process until 16 rows are made.
-let vw = 0
+let squareLeft = 20
+let squareTop = 20
+let z = 0
 
 // Create a single square 
 function createDivSquare() {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 256; i++) {
+        z += 1;
         const container = document.querySelector('#container');
         let div = document.createElement("div");
         div.classList.add('square');
-
-        div.style.left += vw;
+        squareLeft += 20
+        div.style.left = squareLeft;
+        div.style.top = squareTop
         container.appendChild(div);
+        checkSquareLeft()
     }
 }
 
 createDivSquare()
 
+function checkSquareLeft() {
+    if (z % 16 == 0) {
+        squareLeft = 20
+        squareTop += 20
+    }
+}
