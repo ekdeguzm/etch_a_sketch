@@ -6,5 +6,19 @@
     position: absolute;
     left: 20px;
     top: 20px;   
-    /* border-color: aqua; */
+    transition: background-color 0.5s ease-in;
+}
+
+.square:hover {
+    animation: myfirst 1s 1;
+
+}
+
+
+
+@keyframes myfirst {
+    0%      {background:black;}
+    25%     {background:wheat;}
+    75%     {background:wheat;}
+    100%    {background:lightsalmon;}
 }
