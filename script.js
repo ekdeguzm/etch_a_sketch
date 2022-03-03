@@ -21,11 +21,21 @@ function createDivSquare() {
     }
 }
 
-createDivSquare()
-
 function checkSquareLeft() {
     if (z % 16 == 0) {
         squareLeft = 20
         squareTop += 20
     }
 }
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        location.reload()
+    })
+});
+
+
+
+createDivSquare()
