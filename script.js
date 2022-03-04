@@ -2,19 +2,23 @@
 // Create a function that lays down 16 divs next to eachother
 // then moves onto next line down,
 // repeats process until 16 rows are made.
-// let squareLeft = 0
-// let squareTop = 0
+let squareLeft = 0
+let squareTop = 0
 let z = 0
 let numberOfCells
 
-// Create a single square 
-function createDivSquare(number) {
+const container = document.getElementById("container");
+
+function createGrid(number) {
+    container.style.setProperty('grid-template-rows', `repeat(${number}, ${{(1/number) * 600}px)`);
+
+
     for (let i = 0; i < number * number; i++) {
         z += 1;
         const container = document.querySelector('#container');
         let div = document.createElement("div");
         div.classList.add('square');
-        squareLeft += 
+        squareLeft += 20
         div.style.left = `${squareLeft}px`;
         div.style.top = `${squareTop}px`;
         container.appendChild(div);
