@@ -5,10 +5,11 @@
 let squareLeft = 20
 let squareTop = 20
 let z = 0
+let numberOfCells
 
 // Create a single square 
-function createDivSquare() {
-    for (let i = 0; i < 256; i++) {
+function createDivSquare(number) {
+    for (let i = 0; i < number * number; i++) {
         z += 1;
         const container = document.querySelector('#container');
         let div = document.createElement("div");
@@ -22,7 +23,7 @@ function createDivSquare() {
 }
 
 function checkSquareLeft() {
-    if (z % 16 == 0) {
+    if (z % numberOfCells == 0) {
         squareLeft = 20
         squareTop += 20
     }
@@ -37,5 +38,24 @@ buttons.forEach((button) => {
 });
 
 
+// prompt user for number of cells
+function promptUser() {
+    numberOfCells = prompt("Enter the number of cells you want on each side.")
+    numberOfCells = Math.round(numberOfCells);
+    numberOfCells = parseInt(numberOfCells)
 
-createDivSquare()
+    if (isNaN(numberOfCells)) {
+        alert("Please enter a number")
+    }
+
+    if (numberOfCells > 100) {
+        numberOfCells = 100
+        alert("The max is 100. The number of cells is set to 100")
+    }
+
+}
+
+
+promptUser()
+createDivSquare(numberOfCells)
+
