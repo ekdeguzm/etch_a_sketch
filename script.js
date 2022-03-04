@@ -2,36 +2,31 @@
 // Create a function that lays down 16 divs next to eachother
 // then moves onto next line down,
 // repeats process until 16 rows are made.
-let squareLeft = 0
-let squareTop = 0
-let z = 0
+
 let numberOfCells
 
 const container = document.getElementById("container");
 
 function createGrid(number) {
-    container.style.setProperty('grid-template-rows', `repeat(${number}, ${{(1/number) * 600}px)`);
-
-
+    container.style.setProperty('grid-template-rows', `repeat(${number}, ${(1/number) * 600}px)`);
+    container.style.setProperty('grid-template-columns', `repeat(${number}, ${(1/number) * 650}px)`);
     for (let i = 0; i < number * number; i++) {
-        z += 1;
-        const container = document.querySelector('#container');
-        let div = document.createElement("div");
-        div.classList.add('square');
-        squareLeft += 20
-        div.style.left = `${squareLeft}px`;
-        div.style.top = `${squareTop}px`;
-        container.appendChild(div);
-        checkSquareLeft()
+        const child = document.createElement('div')
+        child.style.border = "1px black";
+        container.appendChild(child);
+        child.addEventListener('mouseover', () => {
+            let randomColor = Math.floor(Math.random() * 16777216).toString(16);
+            if (document.querySelector('select').value === "random") {
+                child.style.backgroundColor = `#${randomColor}`;
+            } else {
+                child.style.backgroundColor = "black";
+            }
+        })
     }
-}
 
-function checkSquareLeft() {
-    if (z % numberOfCells == 0) {
-        squareLeft = 0
-        squareTop += 20
-    }
-}
+};
+
+
 
 const buttons = document.querySelectorAll('button');
 
@@ -61,5 +56,5 @@ function promptUser() {
 
 
 promptUser()
-createDivSquare(numberOfCells)
+createGrid(numberOfCells)
 
