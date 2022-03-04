@@ -1,12 +1,13 @@
 body {
     text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #container {
     display: grid;
     border-color: black;
-    border: 30px;
-    margin: 0 auto;
+    border: 0px;
+    margin: 40px auto;
     max-width: 650px;
     max-height: 600px;
 }

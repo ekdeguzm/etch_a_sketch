@@ -20,11 +20,17 @@ function createGrid(number) {
                 child.style.backgroundColor = `#${randomColor}`;
             } else if (document.querySelector('select').value === "black") {
                 child.style.backgroundColor = "black";
-            } else if (document.querySelector('select').value === "erase")
+            } else if (document.querySelector('select').value === "erase") {
                 child.style.backgroundColor = "white";
+            } else if (document.querySelector('select').value === "warm") {
+                child.style.backgroundColor = "orange"
+                child.style.backgroundColor = "lightcoral"
+                child.style.backgroundColor = "yellow"
+            }
+        
         })
-    }
 
+    }
 };
 
 
