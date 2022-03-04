@@ -2,8 +2,8 @@
 // Create a function that lays down 16 divs next to eachother
 // then moves onto next line down,
 // repeats process until 16 rows are made.
-let squareLeft = 20
-let squareTop = 20
+// let squareLeft = 0
+// let squareTop = 0
 let z = 0
 let numberOfCells
 
@@ -14,7 +14,7 @@ function createDivSquare(number) {
         const container = document.querySelector('#container');
         let div = document.createElement("div");
         div.classList.add('square');
-        squareLeft += 20
+        squareLeft += 
         div.style.left = `${squareLeft}px`;
         div.style.top = `${squareTop}px`;
         container.appendChild(div);
@@ -24,7 +24,7 @@ function createDivSquare(number) {
 
 function checkSquareLeft() {
     if (z % numberOfCells == 0) {
-        squareLeft = 20
+        squareLeft = 0
         squareTop += 20
     }
 }
