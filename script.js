@@ -14,8 +14,8 @@ function createDivSquare() {
         let div = document.createElement("div");
         div.classList.add('square');
         squareLeft += 20
-        div.style.left = squareLeft;
-        div.style.top = squareTop
+        div.style.left = `${squareLeft}px`;
+        div.style.top = `${squareTop}px`;
         container.appendChild(div);
         checkSquareLeft()
     }
