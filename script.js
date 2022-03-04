@@ -12,7 +12,7 @@ function createGrid(number) {
     container.style.setProperty('grid-template-columns', `repeat(${number}, ${(1/number) * 650}px)`);
     for (let i = 0; i < number * number; i++) {
         const child = document.createElement('div')
-        child.style.border = "1px black";
+        child.style.border = "1px solid black";
         container.appendChild(child);
         child.addEventListener('mouseover', () => {
             let randomColor = Math.floor(Math.random() * 16777216).toString(16);
@@ -45,11 +45,16 @@ function promptUser() {
 
     if (isNaN(numberOfCells)) {
         alert("Please enter a number")
+        promptUser()
     }
 
     if (numberOfCells > 100) {
         numberOfCells = 100
         alert("The max is 100. The number of cells is set to 100")
+    }
+    
+    if (numberOfCells == '') {
+        numberOfCells = 12;
     }
 
 }
@@ -57,4 +62,5 @@ function promptUser() {
 
 promptUser()
 createGrid(numberOfCells)
+
 
