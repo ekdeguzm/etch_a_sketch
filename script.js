@@ -18,9 +18,10 @@ function createGrid(number) {
             let randomColor = Math.floor(Math.random() * 16777216).toString(16);
             if (document.querySelector('select').value === "random") {
                 child.style.backgroundColor = `#${randomColor}`;
-            } else {
+            } else if (document.querySelector('select').value === "black") {
                 child.style.backgroundColor = "black";
-            }
+            } else if (document.querySelector('select').value === "erase")
+                child.style.backgroundColor = "white";
         })
     }
 
@@ -56,11 +57,12 @@ function promptUser() {
     if (numberOfCells == '') {
         numberOfCells = 12;
     }
-
+    createGrid(numberOfCells)
 }
 
-
+createGrid(12)
 promptUser()
-createGrid(numberOfCells)
+
+
 
 
