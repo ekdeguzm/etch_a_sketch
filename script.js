@@ -14,7 +14,7 @@ function createGrid(number) {
         const child = document.createElement('div')
         child.style.border = "1px solid black";
         container.appendChild(child);
-        child.addEventListener('mouseover', () => {
+        child.addEventListener('mouseenter', () => {
             let randomColor = Math.floor(Math.random() * 16777216).toString(16);
             if (document.querySelector('select').value === "random") {
                 child.style.backgroundColor = `#${randomColor}`;
