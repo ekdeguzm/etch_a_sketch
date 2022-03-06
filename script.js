@@ -6,6 +6,7 @@ function createGrid(number) {
     for (let i = 0; i < number * number; i++) {
         const child = document.createElement('div')
         child.style.border = "1px solid black";
+        child.style.margin = "0px";
         container.appendChild(child);
         child.addEventListener('mouseenter', () => {
             let randomColor = Math.floor(Math.random() * 16777216).toString(16);
@@ -26,31 +27,38 @@ function createGrid(number) {
     }
 };
 
+function clearGrid() {
+    document.getElementById('container').textContent = ''
+};
+
 const resetButton = document.getElementById('reset');
 
 resetButton.addEventListener('click', () => {
-        location.reload()
-    });
+    location.reload()
+});
 
 const smallButton = document.getElementById('small');
 
 smallButton.addEventListener('click', () => {
+    clearGrid()
     createGrid(10)
 });
 
 const mediumButton = document.getElementById('medium');
 
 mediumButton.addEventListener('click', () => {
+    clearGrid()
     createGrid(20)
 });
 
 const largeButton = document.getElementById('large');
 
 largeButton.addEventListener('click', () => {
+    clearGrid()
     createGrid(30)
 });
 
-createGrid(12)
+createGrid(20)
 
 
 
