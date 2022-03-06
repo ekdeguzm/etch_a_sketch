@@ -1,10 +1,3 @@
-// Create a webpage with 16x16 grid of square divs
-// Create a function that lays down 16 divs next to eachother
-// then moves onto next line down,
-// repeats process until 16 rows are made.
-
-let numberOfCells
-
 const container = document.getElementById("container");
 
 function createGrid(number) {
@@ -33,8 +26,6 @@ function createGrid(number) {
     }
 };
 
-
-
 const resetButton = document.getElementById('reset');
 
 resetButton.addEventListener('click', () => {
@@ -58,28 +49,6 @@ const largeButton = document.getElementById('large');
 largeButton.addEventListener('click', () => {
     createGrid(30)
 });
-
-// prompt user for number of cells
-function promptUser() {
-    numberOfCells = prompt("Enter the number of cells you want on each side.")
-    numberOfCells = Math.round(numberOfCells);
-    numberOfCells = parseInt(numberOfCells)
-
-    if (isNaN(numberOfCells)) {
-        alert("Please enter a number")
-        promptUser()
-    }
-
-    if (numberOfCells > 100) {
-        numberOfCells = 100
-        alert("The max is 100. The number of cells is set to 100")
-    }
-    
-    if (numberOfCells == '') {
-        numberOfCells = 12;
-    }
-    createGrid(numberOfCells)
-}
 
 createGrid(12)
 
