@@ -35,7 +35,7 @@ function createGrid(number) {
 
 
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('#reset');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -43,6 +43,12 @@ buttons.forEach((button) => {
     })
 });
 
+const buttons = document.querySelectorAll('.small');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', createGrid(10)
+    })
+);
 
 // prompt user for number of cells
 function promptUser() {
