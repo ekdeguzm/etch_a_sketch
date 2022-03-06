@@ -35,20 +35,29 @@ function createGrid(number) {
 
 
 
-const buttons = document.querySelectorAll('#reset');
+const resetButton = document.getElementById('reset');
 
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
+resetButton.addEventListener('click', () => {
         location.reload()
-    })
+    });
+
+const smallButton = document.getElementById('small');
+
+smallButton.addEventListener('click', () => {
+    createGrid(10)
 });
 
-const buttons = document.querySelectorAll('.small');
+const mediumButton = document.getElementById('medium');
 
-buttons.forEach((button) => {
-    button.addEventListener('click', createGrid(10)
-    })
-);
+mediumButton.addEventListener('click', () => {
+    createGrid(20)
+});
+
+const largeButton = document.getElementById('large');
+
+largeButton.addEventListener('click', () => {
+    createGrid(30)
+});
 
 // prompt user for number of cells
 function promptUser() {
@@ -73,7 +82,6 @@ function promptUser() {
 }
 
 createGrid(12)
-promptUser()
 
 
 
