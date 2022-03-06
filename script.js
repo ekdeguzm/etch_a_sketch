@@ -1,5 +1,8 @@
 const container = document.getElementById("container");
 
+let blue = ['1', '2', '3']
+console.log(blue)
+
 function createGrid(number) {
     container.style.setProperty('grid-template-rows', `repeat(${number}, ${(1/number) * 600}px)`);
     container.style.setProperty('grid-template-columns', `repeat(${number}, ${(1/number) * 650}px)`);
@@ -10,6 +13,10 @@ function createGrid(number) {
         container.appendChild(child);
         child.addEventListener('mouseenter', () => {
             let randomColor = Math.floor(Math.random() * 16777216).toString(16);
+            let warmColorArray = ['#BF6A6D', '#A45256', '#EC6760', '#F88C5D', '#FDCF6D'];
+            let warmColor = Math.floor(Math.random() * warmColorArray.length);
+            let coldColorArray = ['#5590BC', '#0DABB8', '#01F0F6', '#1FFDE1', '#57FFC8'];
+            let coldColor = Math.floor(Math.random() * coldColorArray.length);
             if (document.querySelector('select').value === "random") {
                 child.style.backgroundColor = `#${randomColor}`;
             } else if (document.querySelector('select').value === "black") {
@@ -17,9 +24,9 @@ function createGrid(number) {
             } else if (document.querySelector('select').value === "erase") {
                 child.style.backgroundColor = "white";
             } else if (document.querySelector('select').value === "warm") {
-                child.style.backgroundColor = "orange"
-                child.style.backgroundColor = "lightcoral"
-                child.style.backgroundColor = "yellow"
+                child.style.backgroundColor = warmColorArray[warmColor];
+            } else if (document.querySelector('select').value === "cold") {
+                child.style.backgroundColor = coldColorArray[coldColor];
             }
         
         })
