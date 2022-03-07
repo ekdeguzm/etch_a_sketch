@@ -1,33 +1,34 @@
 body {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #b478297c;
+    background-image: linear-gradient(rgb(88, 30, 247), rgb(226, 169, 83));
+}
+
+.header {
+    color: whitesmoke;
 }
 
 .instructions {
     margin: 10px;
-}
-
-#container {
-    display: grid;
-    border-color: black;
-    border: 0px;
-    margin: 30px auto;
-    max-height: 490px;
-    max-width: 500px; 
-    background-color: white;
+    color: white;
 }
 
 .button-container {
-    margin: 20px;
+    margin: 10px;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center;
+    max-width: 400px; */
 }
 
 button {
     transition: .8s;
-    height: 30px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     margin-right: 10px;
-    transform: scale(.95)
+    transform: scale(.95);
+    border-radius: 50%;
+    border: 1px solid white;
 }
 
 select {
@@ -35,6 +36,8 @@ select {
     transform: scale(.95);
     margin-right: 0px;
     transition: .8s;
+    border: 1px solid white;
+    
 }
 
 button:hover, select:hover {
@@ -58,7 +61,15 @@ label {
     margin-right: 5px;
 }
 
-
+#container {
+    display: grid;
+    border-color: black;
+    border: 0px;
+    margin: 20px auto;
+    max-height: 490px;
+    max-width: 500px; 
+    background-color: white;
+}
 
 .footer { 
     background-color: lightgray;
