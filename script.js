@@ -4,8 +4,8 @@ let blue = ['1', '2', '3']
 console.log(blue)
 
 function createGrid(number) {
-    container.style.setProperty('grid-template-rows', `repeat(${number}, ${(1/number) * 600}px)`);
-    container.style.setProperty('grid-template-columns', `repeat(${number}, ${(1/number) * 650}px)`);
+    container.style.setProperty('grid-template-rows', `repeat(${number}, ${(1/number) * 490}px)`);
+    container.style.setProperty('grid-template-columns', `repeat(${number}, ${(1/number) * 500}px)`);
     for (let i = 0; i < number * number; i++) {
         const child = document.createElement('div')
         child.style.border = "1px solid black";
