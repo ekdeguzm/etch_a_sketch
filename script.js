@@ -38,12 +38,6 @@ function clearGrid() {
     document.getElementById('container').textContent = ''
 };
 
-const resetButton = document.getElementById('reset');
-
-resetButton.addEventListener('click', () => {
-    location.reload()
-});
-
 const smallButton = document.getElementById('small');
 
 smallButton.addEventListener('click', () => {
