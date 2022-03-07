@@ -1,24 +1,22 @@
 body {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(rgb(88, 30, 247), rgb(226, 169, 83));
+    background-image: linear-gradient(to bottom right,rgb(73, 57, 165), rgb(226, 169, 83));
 }
 
-.header {
+h1 {
     color: whitesmoke;
+    text-shadow: 0 0 10px white;
+    margin: 10px;
 }
 
 .instructions {
+    color: whitesmoke;
     margin: 10px;
-    color: white;
 }
 
 .button-container {
     margin: 10px;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center;
-    max-width: 400px; */
 }
 
 button {
@@ -28,7 +26,8 @@ button {
     margin-right: 10px;
     transform: scale(.95);
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 10px white;
 }
 
 select {
@@ -36,7 +35,9 @@ select {
     transform: scale(.95);
     margin-right: 0px;
     transition: .8s;
-    border: 1px solid white;
+    border: 1px solid lightgray;;
+    box-shadow: 0 0 10px white;
+    border-radius: 10px;
     
 }
 
@@ -59,6 +60,7 @@ button:active, .active {
 label {
     margin-left: 5px;
     margin-right: 5px;
+    color: whitesmoke;
 }
 
 #container {
@@ -68,7 +70,7 @@ label {
     margin: 20px auto;
     max-height: 490px;
     max-width: 500px; 
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .footer { 
@@ -76,5 +78,12 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    box-shadow: 0 0 10px white;
+}
+
+#footer-text {
+    padding: 0px;
+    margin: 0px;
+    color: black;
 }
