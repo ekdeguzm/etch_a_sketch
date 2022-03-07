@@ -38,22 +38,31 @@ function clearGrid() {
 const smallButton = document.getElementById('small');
 
 smallButton.addEventListener('click', () => {
-    clearGrid()
-    createGrid(10)
+    smallButton.classList.add('active');
+    mediumButton.classList.remove('active');
+    largeButton.classList.remove('active')
+    clearGrid();
+    createGrid(10);
 });
 
 const mediumButton = document.getElementById('medium');
 
 mediumButton.addEventListener('click', () => {
-    clearGrid()
-    createGrid(20)
+    mediumButton.classList.add('active');
+    smallButton.classList.remove('active');
+    largeButton.classList.remove('active')
+    clearGrid();
+    createGrid(20);
 });
 
 const largeButton = document.getElementById('large');
 
 largeButton.addEventListener('click', () => {
-    clearGrid()
-    createGrid(30)
+    largeButton.classList.add('active');
+    smallButton.classList.remove('active')
+    mediumButton.classList.remove('active')
+    clearGrid();
+    createGrid(30);
 });
 
 createGrid(20)
