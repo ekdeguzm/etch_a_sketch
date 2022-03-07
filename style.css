@@ -29,17 +29,16 @@ button {
     margin-right: 10px;
 }
 
-button:hover {
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-    transform: scale(1);
-    border-color: #ffc600;
-    box-shadow: 0 0 10px #ffc600;
-}
-
 button {
     transform: scale(.95)
+}
+
+button select:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
 }
 
 label {
@@ -48,7 +47,9 @@ label {
 
 select {
     padding: 5px;
+    transform: scale(.95)
 }
+
 
 .footer { 
     background-color: lightgray;
