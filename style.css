@@ -1,6 +1,7 @@
 body {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #b478297c;
 }
 
 .instructions {
@@ -12,10 +13,9 @@ body {
     border-color: black;
     border: 0px;
     margin: 30px auto;
-    /* max-width: 650px; 
-    max-height: 600px; */
     max-height: 490px;
     max-width: 500px; 
+    background-color: white;
 }
 
 .button-container {
@@ -23,16 +23,23 @@ body {
 }
 
 button {
+    transition: .8s;
     height: 30px;
     width: 70px;
     margin-right: 10px;
 }
 
 button:hover {
-    transform: scale(1.2);
     background-color: white;
     border: 1px solid black;
     color: black;
+    transform: scale(1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
+}
+
+button {
+    transform: scale(.95)
 }
 
 label {

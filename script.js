@@ -1,8 +1,5 @@
 const container = document.getElementById("container");
 
-let blue = ['1', '2', '3']
-console.log(blue)
-
 function createGrid(number) {
     container.style.setProperty('grid-template-rows', `repeat(${number}, ${(1/number) * 490}px)`);
     container.style.setProperty('grid-template-columns', `repeat(${number}, ${(1/number) * 500}px)`);
