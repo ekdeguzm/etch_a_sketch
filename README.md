@@ -4,7 +4,7 @@ This is a browser version of Etch A Sketch from The Odin Project [curriculum](ht
 
 **Live preview found [here](https://ekdeguzm.github.io/etch-a-sketch/).**
 
-## Outcomes of thie project:
+## Outcomes of this project:
 
 * Developed a deeper understanding of the DOM tree.
 * Improved functionality by breaking down and optimizing functions.
