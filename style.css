@@ -1,89 +1,125 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
 body {
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to bottom right,rgb(73, 57, 165), rgb(226, 169, 83));
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flexbox setup for body */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(73, 57, 165),
+    rgb(226, 169, 83)
+  );
+}
+
+h1,
+.instructions {
+  color: whitesmoke;
+  margin: 10px;
 }
 
 h1 {
-    color: whitesmoke;
-    text-shadow: 0 0 10px white;
-    margin: 10px;
-}
-
-.instructions {
-    color: whitesmoke;
-    margin: 10px;
+  text-shadow: 0 0 10px white;
 }
 
 .button-container {
-    margin: 10px;
+  margin: 10px;
+}
+
+button,
+select {
+  transition: 0.8s;
+  transform: scale(0.95);
+  border: 1px solid lightgray;
+  box-shadow: 0 0 10px white;
+  border-radius: 50%;
 }
 
 button {
-    transition: .8s;
-    height: 60px;
-    width: 60px;
-    margin-right: 10px;
-    transform: scale(.95);
-    border-radius: 50%;
-    border: 1px solid lightgray;
-    box-shadow: 0 0 10px white;
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
 }
 
 select {
-    padding: 5px;
-    transform: scale(.95);
-    margin-right: 0px;
-    transition: .8s;
-    border: 1px solid lightgray;;
-    box-shadow: 0 0 10px white;
-    border-radius: 10px;
-    
+  padding: 5px;
+  margin-right: 0px;
+  border-radius: 10px;
 }
 
-button:hover, select:hover {
-    background-color: white;
-    color: black;
-    transform: scale(1);
-    border-color: #ffc600;
-    box-shadow: 0 0 10px #ffc600;
-}
-
-button:active, .active {
-    background-color: white;
-    color: black;
-    transform: scale(1);
-    border-color: #ffc600;
-    box-shadow: 0 0 10px #ffc600;
+button:hover,
+select:hover,
+button:active,
+.active {
+  background-color: white;
+  color: black;
+  transform: scale(1);
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
 }
 
 label {
-    margin-left: 5px;
-    margin-right: 5px;
-    color: whitesmoke;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: whitesmoke;
 }
 
+/* Container styling */
 #container {
-    display: grid;
-    border-color: black;
-    border: 0px;
-    margin: 20px auto;
-    max-height: 490px;
-    max-width: 500px; 
-    background-color: whitesmoke;
+  display: grid;
+  border-color: black;
+  border: 0px;
+  margin: 20px auto;
+  max-height: 490px;
+  max-width: 500px;
+  background-color: whitesmoke;
 }
 
-.footer { 
-    background-color: lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 0 10px white;
+/* Footer styling */
+.footer {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 0 10px white;
 }
 
 #footer-text {
-    padding: 0px;
-    margin: 0px;
-    color: black;
+  padding: 0px;
+  margin: 0px;
+  color: black;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure the main content stretches */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

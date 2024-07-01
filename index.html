@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Etch A Sketch</title>
-</head>
-<body>
-    <div class="header">
-        <h1 class="title">Etch A Sketch</h1>
-        <h5 class="instructions">Select the grid size and color. To reset, select grid size.</h5>
-        <h5 class="instructions">Hover mouse over the cells and watch the magic!</h5>
-    <div class="button-container">
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Etch A Sketch</h1>
+      <h5 class="instructions">
+        Select the grid size and color. To reset, select grid size.
+      </h5>
+      <h5 class="instructions">
+        Hover mouse over the cells and watch the magic!
+      </h5>
+    </header>
+    <main>
+      <div class="button-container">
         <button class="zoom-in" id="small">10 x 10</button>
         <button class="zoom-in" id="medium">20 x 20</button>
         <button class="zoom-in" id="large">30 x 30</button>
-        <label>Color: 
-            <select name="colors" id="colors-options">
-                <option value="erase">Erase</option>
-                <option value="black">Black</option>
-                <option value="cold">Cold</option>
-                <option value="warm">Warm</option>
-                <option value="random">Random</option>
-            </select>
+        <label
+          >Color:
+          <select name="colors" id="colors-options">
+            <option value="erase">Erase</option>
+            <option value="black">Black</option>
+            <option value="cold">Cold</option>
+            <option value="warm">Warm</option>
+            <option value="random">Random</option>
+          </select>
         </label>
-    </div>
-    <div id="container"></div>
-    <div class="footer">
-        <h5 id="footer-text">Created by&nbsp;<a href="https://github.com/ekdeguzm">ekdeguzm</a></h5>
-    </div>
-</body>
+      </div>
+      <div id="container"></div>
+    </main>
+    <footer class="footer">
+      <h5 id="footer-text">
+        Created by&nbsp;<a href="https://github.com/ekdeguzm">ekdeguzm</a>
+      </h5>
+    </footer>
+  </body>
 </html>
